@@ -1,6 +1,7 @@
 package com.testsample.ru.component.main
 
 import android.graphics.Color
+import android.util.Log
 import androidx.activity.viewModels
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.size
@@ -29,6 +30,7 @@ import com.testsample.ru.component.home.HomeScreenFactory
 import com.testsample.ru.component.list.ListScreenFactory
 import com.testsample.ru.navigation.*
 import com.testsample.ru.ui.theme.Purple700
+
 //см.
 //https://developer.android.com/jetpack/compose/navigation#nav-to-composable
 
@@ -46,7 +48,10 @@ fun MainComponent() {
     Scaffold(
         bottomBar = {
             val currentDestination = navBackStackEntry?.destination
-            if (isNeedShowBottomBar(navBackStackEntry)) {
+           // val isVisBottom = isNeedShowBottomBar(navBackStackEntry)
+            val isVisBottom = false
+            Log.i("--BAR-50", "--------"+isVisBottom)
+            if (isVisBottom) {
                 BottomNavigation {
                     bottomNavItems.forEachIndexed { index, tabBarItem ->
                         BottomNavigationItem(
@@ -116,6 +121,7 @@ fun MainComponent() {
 
 private fun isNeedShowBottomBar(navBackStackEntry: NavBackStackEntry?): Boolean {
     val currentDestination = navBackStackEntry?.destination?.route
+    Log.i("--BAR-122", "--------"+currentDestination)
     if (currentDestination != null) {
         return currentDestination.contains(Screen.HomeScreen.route) ||
                 currentDestination.contains(Screen.OtherScreen.route) ||

@@ -4,4 +4,17 @@
     <string name="home">home</string>
     <string name="other">other</string>
     <string name="profile">profile</string>
+    <string name="continue_btn">Continue</string>
+
+    <string name="title_1">Choose\nyour type of\nmotivation</string>
+
+    <string name="competence">Competence\n&amp; Learning</string>
+    <string name="attitude">Attitude</string>
+    <string name="achievement">Achievement</string>
+    <string name="creative">Creative \n&amp; Fun</string>
+    <string name="physiological">Physiological</string>
+    <string name="social">Affiliation \n&amp; Social</string>
+    <string name="fear">Fear</string>
+    <string name="power">Power</string>
+    <string name="success">Success</string>
 </resources>
